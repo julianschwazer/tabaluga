@@ -32,42 +32,43 @@ using System.Collections.Generic;
 using TSPS;
 using System;
 
-public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener  {
+public class OpenTspsUnityListener : MonoBehaviour, OpenTSPSListener  {
 	
-	public int port = 12000; //set this from the UI to change the port
+	public int port = 12000; // set this from the UI to change the port
 	
-	private OpenTSPSReceiver receiver;
-	//a place to hold game objects that we attach to people, maps person ID => their object
-	private Dictionary<int,GameObject> peopleCubes = new Dictionary<int,GameObject>();
+	private OpenTSPSReceiver _receiver;
 	
-	//game engine stuff for the example
-	public GameObject bodenfläche; //put the people on this plane
-	public GameObject personenindikator; //used to represent people moving about in our example
+	// a place to hold game objects that we attach to people, maps person ID => their object
+	private Dictionary<int,GameObject> _peopleCubes = new Dictionary<int,GameObject>();
+	
+	// game engine stuff for the example
+	public GameObject floor; // put the people on this plane
+	public GameObject peopleIndicator; // used to represent people moving about in our example
 	
 	void Start() {
-		receiver = new OpenTSPSReceiver( port );
-		receiver.addPersonListener( this );
-		//Security.PrefetchSocketPolicy("localhost",8843);
-		receiver.connect();
+		_receiver = new OpenTSPSReceiver( port );
+		_receiver.addPersonListener( this );
+		
+		// Security.PrefetchSocketPolicy("localhost",8843);
+		_receiver.connect();
 		Debug.Log("created receiver on port " + port);
 	}
 			
 	void Update () {
-		//call this to receiver messages
-		receiver.update();
+		// call this to receiver messages
+		_receiver.update();
 	}
-	
-	
+
 	void OnGUI() {
-		if( receiver.isConnected() ) {
+		if( _receiver.isConnected() ) {
 			GUI.Label( new Rect( 10, 10, 500, 100), "Connected to TSPS on Port " + port );
 		}
 	}
 	
 	public void personEntered(OpenTSPSPerson person){
-		Debug.Log(" person entered with ID " + person.id);
-		GameObject personObject = (GameObject)Instantiate(personenindikator, positionForPerson(person), Quaternion.identity);
-		peopleCubes[person.id] = personObject;
+		Debug.Log("person entered with ID " + person.id);
+		GameObject personObject = (GameObject)Instantiate(peopleIndicator, positionForPerson(person), Quaternion.identity);
+		_peopleCubes[person.id] = personObject;
 	}
 
 	public void personUpdated(OpenTSPSPerson person) {
@@ -76,26 +77,26 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener  {
 
 	public void personMoved(OpenTSPSPerson person){
 		Debug.Log("Person updated with ID " + person.id);
-		if(peopleCubes.ContainsKey(person.id)){
-			GameObject cubeToMove = peopleCubes[person.id];
+		if(_peopleCubes.ContainsKey(person.id)){
+			GameObject cubeToMove = _peopleCubes[person.id];
 			cubeToMove.transform.position = positionForPerson(person);
-			//cubeToMove.transform.position = Vector3.Lerp(transform.position, positionForPerson(person), Time.deltaTime * 0.1);
+			// cubeToMove.transform.position = Vector3.Lerp(transform.position, positionForPerson(person), Time.deltaTime * 0.1);
 		}
 	}
 
 	public void personWillLeave(OpenTSPSPerson person){
 		Debug.Log("Person leaving with ID " + person.id);
-		if(peopleCubes.ContainsKey(person.id)){
-			GameObject cubeToRemove = peopleCubes[person.id];
-			peopleCubes.Remove(person.id);
-			//delete it from the scene	
+		if(_peopleCubes.ContainsKey(person.id)){
+			GameObject cubeToRemove = _peopleCubes[person.id];
+			_peopleCubes.Remove(person.id);
+			// delete it from the scene	
 			Destroy(cubeToRemove);
 		}
 	}
 	
-	//maps the OpenTSPS coordinate system into one that matches the size of the bodenfläche
+	// maps the OpenTSPS coordinate system into one that matches the size of the bodenflï¿½che
 	private Vector3 positionForPerson(OpenTSPSPerson person){
-		Bounds meshBounds = bodenfläche.GetComponent<Renderer>().bounds;
+		Bounds meshBounds = floor.GetComponent<Renderer>().bounds;
 		return new Vector3( (float)(.5 - person.centroidX) * meshBounds.size.x, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z );
 	}
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="OSC.NET" t="Include">
+            <e p="jsOSCBundle.cs" t="Include" />
+            <e p="jsOSCMessage.cs" t="Include" />
+            <e p="jsOSCPacket.cs" t="Include" />
+            <e p="jsOSCReceiver.cs" t="Include" />
+            <e p="jsOSCTransmitter.cs" t="Include" />
+          </e>
+          <e p="TSPS" t="Include">
+            <e p="OpenTSPSListener.cs" t="Include" />
+            <e p="OpenTSPSPerson.cs" t="Include" />
+            <e p="OpenTSPSReceiver.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="DistanceTester.cs" t="Include" />
+          <e p="OpenTSPSUnityListener.cs" t="Include" />
+          <e p="Pong" t="Include">
+            <e p="BallController.cs" t="Include" />
+            <e p="BallScript.cs" t="Include" />
+            <e p="CollisionChecker.cs" t="Include" />
+            <e p="GoalScript.cs" t="Include" />
+            <e p="Player1.cs" t="Include" />
+            <e p="Player2.cs" t="Include" />
+            <e p="Player3.cs" t="Include" />
+            <e p="Player4.cs" t="Include" />
+            <e p="PlayerScript.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="tabaluga.sln" t="IncludeFlat" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_tabaluga.929982812.00" t="ExcludeRecursive" />
+  </component>
+</project>
