@@ -17,9 +17,11 @@ public class Player1 : MonoBehaviour
 
     void PlayerMovement()
     {
+        //if (Input.GetKey(leftKey) && transform.position.x > 5)
         if (Input.GetKey(leftKey) && transform.position.x > 5)
-        {
-            transform.Translate(Vector3.left * Time.deltaTime * speed, Space.Self);
+
+            {
+                transform.Translate(Vector3.left * Time.deltaTime * speed, Space.Self);
         }
         if (Input.GetKey(rightKey) && transform.position.x < 6.8)
         {
