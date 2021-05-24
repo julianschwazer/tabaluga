@@ -19,8 +19,14 @@ public class PlayerScript : MonoBehaviour
     private void Update()
     {
         // Mouse Position
-        Vector3 mousePosition = new Vector3 (Camera.main.ScreenToWorldPoint (Input.mousePosition).x, 0.25f, Camera.main.ScreenToWorldPoint (Input.mousePosition).z);
-        Debug.Log(mousePosition.x + " , " + mousePosition.z);
+        //Vector3 mousePosition = new Vector3 (Camera.main.ScreenToWorldPoint (Input.mousePosition).x, 0.25f, Camera.main.ScreenToWorldPoint (Input.mousePosition).z);
+        //Debug.Log(mousePosition.x + " , " + mousePosition.z);
+        
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = new Vector3(mousePos.x, 0, 0);
+        Debug.Log(mousePos);
+        
+        rb.position = mousePos;
     }
 
     private void FixedUpdate()

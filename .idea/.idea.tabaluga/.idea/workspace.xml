@@ -20,21 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollisionChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollisionChecker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DistanceTester.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DistanceTester.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player1.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player3.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player4.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player4.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pong/PongGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Pong/PongGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +39,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/BallController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DistanceTester.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/GoalScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/BallScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" />
       </list>
     </option>
   </component>
@@ -97,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621418081172</updated>
       <workItem from="1621418092683" duration="13616000" />
+      <workItem from="1621863379812" duration="2327000" />
     </task>
     <servers />
   </component>
@@ -115,6 +104,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
