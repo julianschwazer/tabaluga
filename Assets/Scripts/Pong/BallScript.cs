@@ -1,33 +1,99 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class BallScript : MonoBehaviour
 {
-    Rigidbody rb;
+    // Variables
+    Rigidbody _rb;
     
-    // Start is called before the first frame update
+    // Score Variables
+    private int _scoreLeft, _scoreRight;
+    public int _scoreMax;
+    
+    // Interface Text Variables
+    public TextMeshProUGUI scoreLeftText;
+    public TextMeshProUGUI scoreRightText;
+    
+    
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>(); // assign component to variable
         
-        ReturnToCenter();
+        ResetScore(); // reset score
+        ReturnToCenter(); // reset ball location and start it in random direction
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+        // END of game based on the score
+        if (_scoreLeft >= _scoreMax)
+        {
+            Debug.Log("LEFT has won");
+            // YOU WIN and END GAME
+        }
+        else if (_scoreRight >= _scoreMax)
+        {
+            Debug.Log("Right has won");
+            // YOU WIN and END GAME
+        }
     }
 
     void ReturnToCenter()
     {
+        // flip a coin and shoot the ball either in the left or right direction
         int velX = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
         int velZ = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
         
-        rb.velocity = new Vector3(velX,0,velZ);
-        transform.position = new Vector3(0,0,0);
+        _rb.velocity = new Vector3(velX,0,velZ); // apply movement to ball
+        transform.position = new Vector3(0,0,0); // reset ball to game center
+    }
+
+    void ResetScore()
+    {
+        // reset score variables
+        _scoreLeft = 0;
+        _scoreRight = 0;
+        
+        // reset score texts
+        scoreLeftText.text = _scoreLeft.ToString();
+        scoreRightText.text = _scoreRight.ToString();
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // if the ball collides with one of the paddles
+        }
+
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            // if the ball hits the goal - increase score and set ball to center
+            if (_rb.position.x > 0)
+            {
+                _scoreRight++;
+                scoreRightText.text = _scoreRight.ToString();
+                ReturnToCenter();
+            }
+            else
+            {
+                _scoreLeft++;
+                scoreLeftText.text = _scoreLeft.ToString();
+                ReturnToCenter();
+            }
+            
+        }
+
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            // if the ball collides with the walls
+        }
+
     }
     
 }

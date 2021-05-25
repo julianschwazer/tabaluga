@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mensch
   - Wall
+  - Goal
   layers:
   - Default
   - TransparentFX
