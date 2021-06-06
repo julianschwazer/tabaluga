@@ -13,6 +13,7 @@ public class BallScript : MonoBehaviour
     // Score Variables
     private int _scoreLeft, _scoreRight;
     public int _scoreMax;
+ 
     
     // Interface Text Variables
     public TextMeshProUGUI scoreLeftText;
@@ -21,6 +22,7 @@ public class BallScript : MonoBehaviour
     
     void Start()
     {
+       
         _rb = GetComponent<Rigidbody>(); // assign component to variable
         
         ResetScore(); // reset score
