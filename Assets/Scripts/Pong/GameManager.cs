@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         float pauseTime = Time.realtimeSinceStartup + 3f;
         while (Time.realtimeSinceStartup < pauseTime)
             yield return 0;
-        DelayTime.gameObject.SetActive(false);
+        DelayTime.gameObject.SetActive(true);
         Time.timeScale = 1;
     }
 }
