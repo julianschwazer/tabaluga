@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             while (countdownTime > 0)
         {
             countdownText.text = countdownTime.ToString(); // set text to countdown number
-            yield return new WaitForSecondsRealtime(delay); // wait for a second
+            yield return new WaitForSecondsRealtime(1f); // wait for a second
             countdownTime--; // decrease countdown time by a second
         }
 

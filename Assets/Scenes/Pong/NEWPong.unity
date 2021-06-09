@@ -507,7 +507,7 @@ MonoBehaviour:
   countdownTime: 3
   countdownText: {fileID: 316133761}
   DelayTime: {fileID: 500482302}
-  delay: 5
+  delay: 3
 --- !u!4 &371309117
 Transform:
   m_ObjectHideFlags: 0
@@ -753,7 +753,6 @@ GameObject:
   - component: {fileID: 572121595}
   - component: {fileID: 572121599}
   - component: {fileID: 572121598}
-  - component: {fileID: 572121597}
   - component: {fileID: 572121596}
   - component: {fileID: 572121600}
   - component: {fileID: 572121601}
@@ -771,13 +770,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572121594}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 6.5, y: 10, z: 0.74}
-  m_LocalScale: {x: 1.0776823, y: 0.001077682, z: 1.0776823}
+  m_LocalScale: {x: 1.9550234, y: 0.001955023, z: 1.9550234}
   m_Children: []
   m_Father: {fileID: 172390195}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &572121596
 Animator:
   serializedVersion: 3
@@ -797,20 +796,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &572121597
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572121594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &572121598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -867,7 +852,7 @@ Animation:
   m_GameObject: {fileID: 572121594}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ec199f8cc9b364f16a9c4cbb681b3277, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
