@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class BallScript : MonoBehaviour
@@ -36,11 +37,13 @@ public class BallScript : MonoBehaviour
         if (_scoreLeft >= _scoreMax)
         {
             Debug.Log("LEFT has won");
+            SceneManager.LoadScene("NEWPong");
             // YOU WIN and END GAME
         }
         else if (_scoreRight >= _scoreMax)
         {
             Debug.Log("Right has won");
+            SceneManager.LoadScene("NEWPong");
             // YOU WIN and END GAME
         }
     }
