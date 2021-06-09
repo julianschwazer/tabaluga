@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int countdownTime;
     public TextMeshProUGUI countdownText;
     public GameObject DelayTime;
+    public int delay;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
             while (countdownTime > 0)
         {
             countdownText.text = countdownTime.ToString(); // set text to countdown number
-            yield return new WaitForSecondsRealtime(1f); // wait for a second
+            yield return new WaitForSecondsRealtime(delay); // wait for a second
             countdownTime--; // decrease countdown time by a second
         }
 
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
 
         Time.timeScale = 0;
-        float pauseTime = Time.realtimeSinceStartup + 3f;
+        float pauseTime = Time.realtimeSinceStartup + delay;
         while (Time.realtimeSinceStartup < pauseTime)
             yield return 0;
         DelayTime.gameObject.SetActive(true);

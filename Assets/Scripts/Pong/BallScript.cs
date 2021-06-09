@@ -14,8 +14,8 @@ public class BallScript : MonoBehaviour
     // Score Variables
     private int _scoreLeft, _scoreRight;
     public int _scoreMax;
- 
-    
+
+
     // Interface Text Variables
     public TextMeshProUGUI scoreLeftText;
     public TextMeshProUGUI scoreRightText;
@@ -100,5 +100,6 @@ public class BallScript : MonoBehaviour
         }
 
     }
-    
+
+
 }
