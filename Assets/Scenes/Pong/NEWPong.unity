@@ -507,7 +507,7 @@ MonoBehaviour:
   countdownTime: 3
   countdownText: {fileID: 316133761}
   DelayTime: {fileID: 500482302}
-  delay: 3
+  delay: 4
 --- !u!4 &371309117
 Transform:
   m_ObjectHideFlags: 0
@@ -870,7 +870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8534add1de15b4357a3ee6855abcb7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animation: {fileID: 572121600}
+  delayBeforeLoading: 10
+  sceneNameToLoad: 
 --- !u!1 &713981253
 GameObject:
   m_ObjectHideFlags: 0
