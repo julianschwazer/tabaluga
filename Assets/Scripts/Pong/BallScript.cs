@@ -37,13 +37,13 @@ public class BallScript : MonoBehaviour
         if (_scoreLeft >= _scoreMax)
         {
             Debug.Log("LEFT has won");
-            SceneManager.LoadScene("NEWPong");
+            SceneManager.LoadScene("Indicator");
             // YOU WIN and END GAME
         }
         else if (_scoreRight >= _scoreMax)
         {
             Debug.Log("Right has won");
-            SceneManager.LoadScene("NEWPong");
+            SceneManager.LoadScene("Indicator");
             // YOU WIN and END GAME
         }
     }

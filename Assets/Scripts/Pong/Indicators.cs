@@ -18,15 +18,15 @@ public class Indicators : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IEnumerator StartDelay()
-        {
+        //IEnumerator StartDelay()
+        //{
 
-            Time.timeScale = 0;
-            float pauseTime = Time.realtimeSinceStartup + 0f;
-            while (Time.realtimeSinceStartup < pauseTime)
-                yield return 0;
-            Animation.gameObject.SetActive(false);
-            Time.timeScale = 1;
-        }
+        //    Time.timeScale = 0;
+        //    float pauseTime = Time.realtimeSinceStartup + 0f;
+        //    while (Time.realtimeSinceStartup < pauseTime)
+        //        yield return 0;
+        //    Animation.gameObject.SetActive(false);
+        //    Time.timeScale = 1;
+        //}
     }
 }

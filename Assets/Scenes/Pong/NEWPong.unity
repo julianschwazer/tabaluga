@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &172390195
 Transform:
   m_ObjectHideFlags: 0
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eca5b5d5fd5c4186b68139f400f72d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreMax: 10
+  _scoreMax: 5
   scoreLeftText: {fileID: 1127670078}
   scoreRightText: {fileID: 1689393044}
 --- !u!54 &500482304
