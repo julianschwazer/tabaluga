@@ -3,30 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Indicators : MonoBehaviour
 {
-    public Animation Animation;
+    [SerializeField]
+    private float delayBeforeLoading = 5f;
+    [SerializeField]
+    private string sceneNameToLoad;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private float timeElapsed;
 
     // Update is called once per frame
     void Update()
     {
-        //IEnumerator StartDelay()
-        //{
+        timeElapsed += Time.deltaTime;
 
-        //    Time.timeScale = 0;
-        //    float pauseTime = Time.realtimeSinceStartup + 0f;
-        //    while (Time.realtimeSinceStartup < pauseTime)
-        //        yield return 0;
-        //    Animation.gameObject.SetActive(false);
-        //    Time.timeScale = 1;
-        //}
+        if( timeElapsed > delayBeforeLoading)
+        {
+            SceneManager.LoadScene(sceneNameToLoad);
+        }
     }
 }
