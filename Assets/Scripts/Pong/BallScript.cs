@@ -83,8 +83,8 @@ public class BallScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // if the ball collides with one of the paddles
-            velX += velX * 1;
-            velZ += velZ *1;
+            velX += velX * 2;
+            velZ += velZ * 2;
 
         }
 

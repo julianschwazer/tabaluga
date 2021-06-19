@@ -10,7 +10,7 @@ public class Indicators : MonoBehaviour
     [SerializeField]
     private float delayBeforeLoading = 5f;
     [SerializeField]
-    private string sceneNameToLoad;
+    //public string sceneNameToLoad;
 
     private float timeElapsed;
 
@@ -21,7 +21,8 @@ public class Indicators : MonoBehaviour
 
         if( timeElapsed > delayBeforeLoading)
         {
-            SceneManager.LoadScene(sceneNameToLoad);
+            //SceneManager.LoadScene(sceneNameToLoad);
+            SceneManager.LoadScene("NEWPong");
         }
     }
 }

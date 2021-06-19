@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  sceneNameToLoad: NEWPong
+  timeElapsed: 0
 --- !u!1 &304954730
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  sceneNameToLoad: 
+  timeElapsed: 0
 --- !u!111 &485516054
 Animation:
   m_ObjectHideFlags: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  sceneNameToLoad: 
+  timeElapsed: 0
 --- !u!1 &734970149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  sceneNameToLoad: 
+  timeElapsed: 0
 --- !u!111 &1456585221
 Animation:
   m_ObjectHideFlags: 0
@@ -1542,7 +1542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e297540dcf5f341ed95ccd16bdf4df10, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e297540dcf5f341ed95ccd16bdf4df10, type: 3}
       propertyPath: personMarker
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  sceneNameToLoad: 
+  timeElapsed: 0
 --- !u!111 &1798295085
 Animation:
   m_ObjectHideFlags: 0
