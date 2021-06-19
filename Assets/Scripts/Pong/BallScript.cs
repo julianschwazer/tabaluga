@@ -10,7 +10,9 @@ public class BallScript : MonoBehaviour
 {
     // Variables
     Rigidbody _rb;
-    
+    float velX;
+    float velZ;
+
     // Score Variables
     private int _scoreLeft, _scoreRight;
     public int _scoreMax;
@@ -46,13 +48,20 @@ public class BallScript : MonoBehaviour
             SceneManager.LoadScene("NEWPong");
             // YOU WIN and END GAME
         }
+       // MoveBall();
     }
+
+    /*void MoveBall()
+    {
+        _rb.velocity = new Vector3(_xSpeed,0, _ySpeed);
+    }
+    */
 
     void ReturnToCenter()
     {
         // flip a coin and shoot the ball either in the left or right direction
-        int velX = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
-        int velZ = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
+         velX = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
+         velZ = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
         
         _rb.velocity = new Vector3(velX,0,velZ); // apply movement to ball
         transform.position = new Vector3(0,0,0); // reset ball to game center
@@ -74,6 +83,9 @@ public class BallScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // if the ball collides with one of the paddles
+            velX += velX * 1;
+            velZ += velZ *1;
+
         }
 
         if (other.gameObject.CompareTag("Goal"))
