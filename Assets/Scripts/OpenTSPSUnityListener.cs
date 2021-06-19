@@ -41,13 +41,14 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
     //a place to hold game objects that we attach to people, maps person ID => their object
     private Dictionary<int, GameObject> peopleCubes = new Dictionary<int, GameObject>();
 
-    private List<GameObject> m_list = new List<GameObject>();
+    //private List<GameObject> m_list = new List<GameObject>();
 
     //game engine stuff for the example
     public GameObject bodenfläche; //put the people on this plane
     public GameObject personenindikator; //used to represent people moving about in our example
 
-    public int Maximum = 4;
+    public int Max_People = 4;
+    int i;
 
     void Start()
     {
@@ -62,8 +63,8 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
     {
         //call this to receiver messages
         receiver.update();
-        if (m_list.Count >= Maximum)
-            return;
+        //if (m_list.Count <= Max_People)
+        //return;
     }
 
 
@@ -77,9 +78,15 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
 
     public void personEntered(OpenTSPSPerson person)
     {
-        Debug.Log(" person entered with ID " + person.id);
-        GameObject personObject = (GameObject)Instantiate(personenindikator, positionForPerson(person), Quaternion.identity);
-        peopleCubes[person.id] = personObject;
+        if( i <= Max_People)
+        {
+            Debug.Log(" person entered with ID " + person.id);
+            GameObject personObject = (GameObject)Instantiate(personenindikator, positionForPerson(person), Quaternion.identity);
+            peopleCubes[person.id] = personObject;
+            i++;
+            
+        }
+        
 
     }
 
@@ -108,6 +115,7 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
             peopleCubes.Remove(person.id);
             //delete it from the scene	
             Destroy(cubeToRemove);
+            i--;
         }
     }
 
