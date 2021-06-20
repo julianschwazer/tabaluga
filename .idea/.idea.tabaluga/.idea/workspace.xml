@@ -20,20 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Floor texture_2_Zeichenfläche 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Floor texture_2_Zeichenfläche 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Floor texture_Zeichenfläche 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Floor texture_Zeichenfläche 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Texture_Zeichenfläche 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Texture_Zeichenfläche 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Distance_Test.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Distance_Test.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pong/PongGame.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pong/PongGame.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pong/BallScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pong/BallScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pong/GoalScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pong/GoalScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NEWPong.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NEWPong.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +34,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../pacman/Assets/Scripts/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -54,6 +50,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/BallScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" />
       </list>
     </option>
   </component>

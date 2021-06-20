@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("BackgroundMusic");
+        FindObjectOfType<AudioManager>().Play("Countdown");
         StartCoroutine(CountdownStart());
         StartCoroutine(StartDelay());
     }

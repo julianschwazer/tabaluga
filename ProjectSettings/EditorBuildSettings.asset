@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Pong/Indicator.unity
+    path: Assets/Scenes/Indicator.unity
     guid: dcdb0b308b1f2498ea3321e4a226810f
   - enabled: 1
-    path: Assets/Scenes/Pong/NEWPong.unity
+    path: Assets/Scenes/NEWPong.unity
     guid: fba4e9bd3e29e43a1881a9a72e67018b
   m_configObjects: {}

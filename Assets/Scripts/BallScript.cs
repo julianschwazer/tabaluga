@@ -21,7 +21,8 @@ public class BallScript : MonoBehaviour
     // Interface Text Variables
     public TextMeshProUGUI scoreLeftText;
     public TextMeshProUGUI scoreRightText;
-    
+
+    private GameManager _gameManager;
     
     void Start()
     {
@@ -82,6 +83,8 @@ public class BallScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("PaddleHit");
+            
             // if the ball collides with one of the paddles
             velX += velX * 2;
             velZ += velZ * 2;
@@ -90,6 +93,8 @@ public class BallScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Goal"))
         {
+            FindObjectOfType<AudioManager>().Play("Goal");
+            
             // if the ball hits the goal - increase score and set ball to center
             if (_rb.position.x > 0)
             {
@@ -108,10 +113,10 @@ public class BallScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Wall"))
         {
+            FindObjectOfType<AudioManager>().Play("WallHit");
+            
             // if the ball collides with the walls
         }
 
     }
-
-
 }
