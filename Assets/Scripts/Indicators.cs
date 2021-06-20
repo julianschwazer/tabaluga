@@ -9,21 +9,16 @@ using UnityEngine.SceneManagement;
 public class Indicators : MonoBehaviour
 {
     [SerializeField]
-    private float delayBeforeLoading = 5f;
-    [SerializeField]
-    //public string sceneNameToLoad;
+    private float delayBeforeLoading = 5f; // delay before the GAME starts
+    private float _timeElapsed; // elapsed time
 
-    private float timeElapsed;
-
-    // Update is called once per frame
     void Update()
     {
-        timeElapsed += Time.deltaTime;
+        _timeElapsed += Time.deltaTime;
 
-        if( timeElapsed > delayBeforeLoading)
+        if( _timeElapsed > delayBeforeLoading)
         {
-            //SceneManager.LoadScene(sceneNameToLoad);
-            SceneManager.LoadScene("NEWPong");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // loading next scene
         }
     }
 }

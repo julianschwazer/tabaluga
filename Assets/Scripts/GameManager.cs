@@ -6,51 +6,54 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     
-    // Countdown Variables
+    // variables for the Countdown
     public int countdownTime;
-    public TextMeshProUGUI countdownText;
-    public GameObject DelayTime;
+    public TextMeshProUGUI countdownTextFloor, countdownTextWall;
+    public GameObject delayedObject;
     public int delay;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // PLAY BackgroundMusic and Countdown audio file
         FindObjectOfType<AudioManager>().Play("BackgroundMusic");
         FindObjectOfType<AudioManager>().Play("Countdown");
+        
+        // coroutines for COUNTDOWN and delaying the start of the BALL
         StartCoroutine(CountdownStart());
         StartCoroutine(StartDelay());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator CountdownStart()
     {
-            while (countdownTime > 0)
-        {
-            countdownText.text = countdownTime.ToString(); // set text to countdown number
+        while (countdownTime > 0) {
+            countdownTextFloor.text = countdownTextWall.text = countdownTime.ToString(); // set text to countdown number
             yield return new WaitForSecondsRealtime(1f); // wait for a second
             countdownTime--; // decrease countdown time by a second
         }
-
-        countdownText.text = "Go!"; // change countdown to GO
+        
+        // CHANGE countdown TEXT to Go!
+        countdownTextFloor.text = countdownTextWall.text = "Go!";
+        
         yield return new WaitForSecondsRealtime(1f); // wait for another second
-        countdownText.gameObject.SetActive(false); // hide text
+        
+        // HIDING the countdown text when the game starts
+        countdownTextFloor.gameObject.SetActive(false);
+        countdownTextWall.gameObject.SetActive(false);
 
-         // START GAME HERE
+         // GAME STARTS HERE
     }
 
     IEnumerator StartDelay()
     {
-
-        Time.timeScale = 0;
+        Time.timeScale = 0; // pause GAME
+        
+        // delaying the game start
         float pauseTime = Time.realtimeSinceStartup + delay;
-        while (Time.realtimeSinceStartup < pauseTime)
+        while (Time.realtimeSinceStartup < pauseTime) {
             yield return 0;
-        DelayTime.gameObject.SetActive(true);
-        Time.timeScale = 1;
+        }
+        
+        delayedObject.gameObject.SetActive(true); // activate BALL
+        Time.timeScale = 1; // play GAME
     }
 }

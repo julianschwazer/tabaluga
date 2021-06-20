@@ -19,15 +19,13 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Change Position of all Paddles with the mouse
+        // change position of al paddles with the mouse
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
         mousePos = new Vector3(paddleX, 0, mousePos.z); // ignore unneeded coordinates
         _rb.velocity = (mousePos - transform.position) * speed; // change paddle position with mouse
         
         // player login interface overlay
         // countdown 
-        
-        
 
         // Assign TSPS coordinates to player coordinates when the countdown hits zero
         // if playerOne --> centroidX = _playerOneX; centroidZ = _playerOneZ;
@@ -45,17 +43,8 @@ public class PlayerScript : MonoBehaviour
         // Player 4
         // if X < -6 and Z > 0
         
-        
-        
         //Vector3 playerPos = new Vector3(centroidX, 0 centroidZ);
         //_rb.velocity = (playerPos - transform.position) * speed;
-        
-        
-        
-        
-
-        
-        
         
         
         ////////// ---------- CODE ARCHIVE ----------

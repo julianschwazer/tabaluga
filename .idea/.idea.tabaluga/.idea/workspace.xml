@@ -20,12 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NEWPong.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NEWPong.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PongGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PongGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DistanceTester.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DistanceTester.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +57,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/BallScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Sound.cs" />
       </list>
     </option>
   </component>
@@ -123,9 +131,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1634" y="125" width="826" height="1127" key="VCS.FileHistoryDialog" timestamp="1621939327131">
-      <screen x="0" y="25" width="2560" height="1327" />
+    <state x="1634" y="125" width="826" height="1128" key="VCS.FileHistoryDialog" timestamp="1624194148581">
+      <screen x="0" y="25" width="2560" height="1328" />
     </state>
     <state x="1634" y="125" width="826" height="1127" key="VCS.FileHistoryDialog/0.25.2560.1327/-1440.25.1440.875@0.25.2560.1327" timestamp="1621939327131" />
+    <state x="1634" y="125" width="826" height="1128" key="VCS.FileHistoryDialog/0.25.2560.1328/-1440.25.1440.875@0.25.2560.1328" timestamp="1624194148581" />
   </component>
 </project>

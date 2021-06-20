@@ -6,16 +6,16 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    // -- Variables for Audio Manager
+    // variables for AudioManager
     public Sound[] sounds;
     public static AudioManager instance;
     
     void Awake()
     {
-        // -- Allow the Music to play across Scenes
+        // allow music to play across all scenes until stopped
         DontDestroyOnLoad(gameObject);
         
-        // -- Make sure that there is always only one AudioManager across Scenes
+        // make sure that there is always just one AudioManager and destroy the others
         if (instance == null)
         {
             instance = this;
@@ -26,41 +26,43 @@ public class AudioManager : MonoBehaviour
             return;
         }
         
-        // -- Settings for AudioManager Sounds in Editor
+        // settings for AudioManager sounds in the editor
         foreach(Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             
-            // -- Options available in Editor
+            // options that are available in the editor
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
     }
 
-    // -- Function for playing the right sound file
+    // function for playing the sound file
     public void Play(string name)
     {
-        // -- Find the right song in the Array of sounds
+        // finding the right sound in the array on the AudioManager
         Sound s = Array.Find(sounds, sound => sound.name == name);
         
-        // -- Check if AudioFile Name is spelled correctly - Warning
+        // check if the file can be found
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found! :)");
             return;
         }
         
+        // START playing
         s.source.Play();
         
     }
 
     public void Stop(string name)
     {
-        // -- Find the right song in the Array of sounds
+        // finding the right sound in the array on the AudioManager
         Sound s = Array.Find(sounds, sound => sound.name == name);
         
+        // STOP playing
         s.source.Stop();
     }
     

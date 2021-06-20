@@ -10,6 +10,11 @@
       <Path>Library/PackageCache/com.unity.test-framework@1.1.16</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.2.14</Path>
+      <Path>Library/PackageCache/jp.keijiro.klak.ndi@1.0.12</Path>
+      <Path>Library/PackageCache/org.nuget.system.buffers@4.4.0</Path>
+      <Path>Library/PackageCache/org.nuget.system.memory@4.5.3</Path>
+      <Path>Library/PackageCache/org.nuget.system.numerics.vectors@4.4.0</Path>
+      <Path>Library/PackageCache/org.nuget.system.runtime.compilerservices.unsafe@4.5.2</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>

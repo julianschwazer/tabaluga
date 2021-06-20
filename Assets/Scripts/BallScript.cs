@@ -8,21 +8,20 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class BallScript : MonoBehaviour
 {
-    // Variables
+    // variables
     Rigidbody _rb;
     float velX;
     float velZ;
 
-    // Score Variables
+    // score variables
     private int _scoreLeft, _scoreRight;
     public int _scoreMax;
-
-
-    // Interface Text Variables
-    public TextMeshProUGUI scoreLeftText;
-    public TextMeshProUGUI scoreRightText;
-
-    private GameManager _gameManager;
+    
+    // interface TEXT variables for FLOOR and WALL
+    public TextMeshProUGUI scoreLeftTextFloor, scoreLeftTextWall;
+    public TextMeshProUGUI scoreRightTextFloor, scoreRightTextWall;
+    public TextMeshProUGUI winnerTextFloor,winnerTextWall;
+    
     
     void Start()
     {
@@ -35,19 +34,26 @@ public class BallScript : MonoBehaviour
 
     void Update()
     {
-        
         // END of game based on the score
         if (_scoreLeft >= _scoreMax)
         {
-            Debug.Log("LEFT has won");
+            // enable WINNER text elements
+            winnerTextFloor.gameObject.SetActive(true);
+            winnerTextWall.gameObject.SetActive(true);
+            
+            // WINNER text and load indicator scene
+            winnerTextFloor.text = winnerTextWall.text = "LEFT TEAM WINS";
             SceneManager.LoadScene("Indicator");
-            // YOU WIN and END GAME
         }
         else if (_scoreRight >= _scoreMax)
         {
-            Debug.Log("Right has won");
+            // enable WINNER text elements
+            winnerTextFloor.gameObject.SetActive(true);
+            winnerTextWall.gameObject.SetActive(true);
+            
+            // WINNER text and load indicator scene
+            winnerTextFloor.text = winnerTextWall.text = "RIGHT TEAM WINS";
             SceneManager.LoadScene("Indicator");
-            // YOU WIN and END GAME
         }
        // MoveBall();
     }
@@ -75,14 +81,15 @@ public class BallScript : MonoBehaviour
         _scoreRight = 0;
         
         // reset score texts
-        scoreLeftText.text = _scoreLeft.ToString();
-        scoreRightText.text = _scoreRight.ToString();
+        scoreLeftTextFloor.text = scoreLeftTextWall.text = _scoreLeft.ToString();
+        scoreRightTextFloor.text = scoreRightTextWall.text = _scoreRight.ToString();
     }
     
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            // PLAY PaddleHit audio file
             FindObjectOfType<AudioManager>().Play("PaddleHit");
             
             // if the ball collides with one of the paddles
@@ -93,30 +100,28 @@ public class BallScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Goal"))
         {
+            // PLAY Goal audio file
             FindObjectOfType<AudioManager>().Play("Goal");
             
-            // if the ball hits the goal - increase score and set ball to center
+            // if the ball hits the goal - increase score and return ball to center
             if (_rb.position.x > 0)
             {
                 _scoreRight++;
-                scoreRightText.text = _scoreRight.ToString();
+                scoreRightTextFloor.text = scoreRightTextWall.text = _scoreRight.ToString();
                 ReturnToCenter();
             }
             else
             {
                 _scoreLeft++;
-                scoreLeftText.text = _scoreLeft.ToString();
+                scoreLeftTextFloor.text = scoreLeftTextWall.text = _scoreLeft.ToString();
                 ReturnToCenter();
             }
-            
         }
 
         if (other.gameObject.CompareTag("Wall"))
         {
+            // PLAY PaddleHit audio file with different pitch for the WallHit
             FindObjectOfType<AudioManager>().Play("WallHit");
-            
-            // if the ball collides with the walls
         }
-
     }
 }
