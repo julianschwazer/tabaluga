@@ -145,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147956926}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2d98e5bfcdff4847ad69efa861a8e7f, type: 3}
   m_Name: 
@@ -1050,31 +1050,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: BackgroundMusic
-    clip: {fileID: 8300000, guid: 5eb8f2065ac7b4e39a0fceca2df7a265, type: 3}
+    clip: {fileID: 8300000, guid: 7d92b0e212e834c00915e1e60608bd25, type: 3}
     volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Countdown
-    clip: {fileID: 8300000, guid: 01521a32c73314a5fb6ee79b2cd407d3, type: 3}
+    clip: {fileID: 8300000, guid: 3ea360bf1d37d44c8a280390e3a38861, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Goal
-    clip: {fileID: 8300000, guid: bb53973dae3fc481f92de676898ed137, type: 3}
+    clip: {fileID: 8300000, guid: 8d75c1105a3a14e4b8184195b2af72b5, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PaddleHit
-    clip: {fileID: 8300000, guid: f5216827dccad485a87d9ddb7f12863c, type: 3}
+    clip: {fileID: 8300000, guid: ebd733981bdfd4c619db17350d2b3a0a, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: WallHit
-    clip: {fileID: 8300000, guid: f5216827dccad485a87d9ddb7f12863c, type: 3}
+    clip: {fileID: 8300000, guid: ebd733981bdfd4c619db17350d2b3a0a, type: 3}
     volume: 1
     pitch: 2.5
     loop: 0
