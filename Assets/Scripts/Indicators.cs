@@ -18,7 +18,7 @@ public class Indicators : MonoBehaviour
 
         if( _timeElapsed > delayBeforeLoading)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // loading next scene
+            SceneManager.LoadScene(1); // loading next scene
         }
     }
 }

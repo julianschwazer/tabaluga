@@ -25,7 +25,6 @@ public class BallScript : MonoBehaviour
     
     void Start()
     {
-       
         _rb = GetComponent<Rigidbody>(); // assign component to variable
         
         ResetScore(); // reset score
@@ -43,7 +42,7 @@ public class BallScript : MonoBehaviour
             
             // WINNER text and load indicator scene
             winnerTextFloor.text = winnerTextWall.text = "LEFT TEAM WINS";
-            SceneManager.LoadScene("Indicator");
+            SceneManager.LoadScene(0);
         }
         else if (_scoreRight >= _scoreMax)
         {
@@ -53,7 +52,7 @@ public class BallScript : MonoBehaviour
             
             // WINNER text and load indicator scene
             winnerTextFloor.text = winnerTextWall.text = "RIGHT TEAM WINS";
-            SceneManager.LoadScene("Indicator");
+            SceneManager.LoadScene(0);
         }
        // MoveBall();
     }
