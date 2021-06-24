@@ -34,7 +34,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../pacman/Assets/Scripts/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -100,6 +99,7 @@
       <workItem from="1621863379812" duration="2327000" />
       <workItem from="1621932643300" duration="8395000" />
       <workItem from="1624195884266" duration="58000" />
+      <workItem from="1624530718834" duration="597000" />
     </task>
     <servers />
   </component>
