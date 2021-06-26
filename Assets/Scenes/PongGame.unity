@@ -819,7 +819,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 1222140835}
   indicatorGroup: {fileID: 639330412}
   indicatorAnimationTime: 10
-  goDisplayTime: 2
+  goDisplayTime: 1
   ballWaitTime: 1
 --- !u!4 &371309117
 Transform:
