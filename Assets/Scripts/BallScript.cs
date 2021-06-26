@@ -21,7 +21,8 @@ public class BallScript : MonoBehaviour
     public TextMeshProUGUI scoreLeftTextFloor, scoreLeftTextWall;
     public TextMeshProUGUI scoreRightTextFloor, scoreRightTextWall;
     public TextMeshProUGUI winnerTextFloor,winnerTextWall;
-    
+
+    public float sceneReloadDelay;
     
     void Start()
     {
@@ -45,7 +46,8 @@ public class BallScript : MonoBehaviour
             
             // WINNER text and load indicator scene
             winnerTextFloor.text = winnerTextWall.text = "LEFT TEAM WINS";
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(ReloadGame());
+
         }
         else if (_scoreRight >= _scoreMax)
         {
@@ -55,7 +57,7 @@ public class BallScript : MonoBehaviour
             
             // WINNER text and load indicator scene
             winnerTextFloor.text = winnerTextWall.text = "RIGHT TEAM WINS";
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(ReloadGame());
         }
        // MoveBall();
     }
@@ -125,5 +127,14 @@ public class BallScript : MonoBehaviour
             // PLAY PaddleHit audio file with different pitch for the WallHit
             FindObjectOfType<AudioManager>().Play("WallHit");
         }
+    }
+    
+    IEnumerator ReloadGame()
+    {
+        // waiting for some seconds and reload the scene
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(sceneReloadDelay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 }

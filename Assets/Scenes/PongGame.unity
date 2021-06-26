@@ -1242,6 +1242,7 @@ MonoBehaviour:
   scoreRightTextWall: {fileID: 713981255}
   winnerTextFloor: {fileID: 1263896013}
   winnerTextWall: {fileID: 1857785969}
+  sceneReloadDelay: 2
 --- !u!54 &500482304
 Rigidbody:
   m_ObjectHideFlags: 0
