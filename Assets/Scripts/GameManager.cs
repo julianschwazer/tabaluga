@@ -11,14 +11,16 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI countdownTextFloor, countdownTextWall;
     public GameObject delayedObject;
     public int delay;
+    public GameObject IndicatorObject;
 
     void Start()
     {
         // PLAY BackgroundMusic and Countdown audio file
         FindObjectOfType<AudioManager>().Play("BackgroundMusic");
         FindObjectOfType<AudioManager>().Play("Countdown");
-        
+
         // coroutines for COUNTDOWN and delaying the start of the BALL
+        StartCoroutine(Indicators());
         StartCoroutine(CountdownStart());
         StartCoroutine(StartDelay());
     }
@@ -55,5 +57,15 @@ public class GameManager : MonoBehaviour
         
         delayedObject.gameObject.SetActive(true); // activate BALL
         Time.timeScale = 1; // play GAME
+    }
+
+    IEnumerator Indicators()
+    {
+        if IndicatorObject.SetActive(true){
+
+            yield return new WaitForSecondsRealtime(5f); // wait for another second
+            IndicatorObject.gameObject.SetActive(false);
+        }
+
     }
 }

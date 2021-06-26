@@ -831,6 +831,7 @@ MonoBehaviour:
   countdownTextWall: {fileID: 2027798952}
   delayedObject: {fileID: 500482302}
   delay: 4
+  IndicatorObject: {fileID: 639330412}
 --- !u!4 &371309117
 Transform:
   m_ObjectHideFlags: 0
