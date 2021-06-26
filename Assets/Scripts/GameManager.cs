@@ -7,65 +7,53 @@ public class GameManager : MonoBehaviour
 {
     
     // variables for the Countdown
-    public int countdownTime;
+    public int countdownSeconds;
     public TextMeshProUGUI countdownTextFloor, countdownTextWall;
+    
     public GameObject delayedObject;
-    public int delay;
-    public GameObject IndicatorObject;
+    public GameObject canvasGroup;
+    public GameObject indicatorGroup;
 
+    public float indicatorAnimationTime;
+    public float goDisplayTime;
+    public float ballWaitTime;
+    
     void Start()
     {
         // PLAY BackgroundMusic and Countdown audio file
         FindObjectOfType<AudioManager>().Play("BackgroundMusic");
-        FindObjectOfType<AudioManager>().Play("Countdown");
-
-        // coroutines for COUNTDOWN and delaying the start of the BALL
-        StartCoroutine(Indicators());
-        StartCoroutine(CountdownStart());
-        StartCoroutine(StartDelay());
+        StartCoroutine(GameStart());
     }
 
-    IEnumerator CountdownStart()
+    IEnumerator GameStart()
     {
-        while (countdownTime > 0) {
-            countdownTextFloor.text = countdownTextWall.text = countdownTime.ToString(); // set text to countdown number
+        // waiting for the INDICATOR ANIMATION and hiding it afterwards
+        yield return new WaitForSecondsRealtime(indicatorAnimationTime);
+        indicatorGroup.gameObject.SetActive(false);
+
+        // enabling the interface elements and starting the countdown sound
+        canvasGroup.gameObject.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Countdown");
+        
+        // starting the countdown with changing the text every second
+        while (countdownSeconds > 0) {
+            countdownTextFloor.text = countdownTextWall.text = countdownSeconds.ToString(); // set text to countdown number
             yield return new WaitForSecondsRealtime(1f); // wait for a second
-            countdownTime--; // decrease countdown time by a second
+            countdownSeconds--; // decrease countdown time by a second
         }
         
-        // CHANGE countdown TEXT to Go!
+        // change countdown text to GO! and display it for some seconds
         countdownTextFloor.text = countdownTextWall.text = "Go!";
-        
-        yield return new WaitForSecondsRealtime(1f); // wait for another second
+        yield return new WaitForSecondsRealtime(goDisplayTime); // wait for another second
         
         // HIDING the countdown text when the game starts
         countdownTextFloor.gameObject.SetActive(false);
         countdownTextWall.gameObject.SetActive(false);
-
-         // GAME STARTS HERE
-    }
-
-    IEnumerator StartDelay()
-    {
-        Time.timeScale = 0; // pause GAME
         
-        // delaying the game start
-        float pauseTime = Time.realtimeSinceStartup + delay;
-        while (Time.realtimeSinceStartup < pauseTime) {
-            yield return 0;
-        }
-        
-        delayedObject.gameObject.SetActive(true); // activate BALL
-        Time.timeScale = 1; // play GAME
-    }
+        // waiting for some seconds before the ball gets active and starts moving
+        yield return new WaitForSecondsRealtime(ballWaitTime); // wait for another second
+        delayedObject.gameObject.SetActive(true);
 
-    IEnumerator Indicators()
-    {
-        if IndicatorObject.SetActive(true){
-
-            yield return new WaitForSecondsRealtime(5f); // wait for another second
-            IndicatorObject.gameObject.SetActive(false);
-        }
-
+        // GAME STARTS HERE
     }
 }
