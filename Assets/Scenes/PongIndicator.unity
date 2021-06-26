@@ -169,7 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  timeElapsed: 0
 --- !u!1 &304954730
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +535,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  timeElapsed: 0
 --- !u!111 &485516054
 Animation:
   m_ObjectHideFlags: 0
@@ -747,7 +745,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  timeElapsed: 0
 --- !u!1 &734970149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  timeElapsed: 0
 --- !u!111 &1456585221
 Animation:
   m_ObjectHideFlags: 0
@@ -1650,7 +1646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 5
-  timeElapsed: 0
 --- !u!111 &1798295085
 Animation:
   m_ObjectHideFlags: 0

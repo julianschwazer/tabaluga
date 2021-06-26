@@ -57,6 +57,7 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
         //Security.PrefetchSocketPolicy("localhost",8843);
         receiver.connect();
         Debug.Log("created receiver on port " + port);
+        i = 0;
     }
 
     void Update()
