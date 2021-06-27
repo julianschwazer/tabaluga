@@ -13,6 +13,11 @@ public class BallScript : MonoBehaviour
     float velX;
     float velZ;
 
+    // bulletproofing
+    private int hitCounter;
+    public int maxHitCount;
+    public GameObject tspsObject;
+    
     // score variables
     private int _scoreLeft, _scoreRight;
     public int _scoreMax;
@@ -26,6 +31,8 @@ public class BallScript : MonoBehaviour
     
     void Start()
     {
+        hitCounter = 0; // reset variable
+            
         // reset scores
         scoreLeftTextFloor.text = scoreLeftTextWall.text = scoreRightTextFloor.text = scoreRightTextWall.text = 0.ToString();
 
@@ -70,6 +77,8 @@ public class BallScript : MonoBehaviour
 
     void ReturnToCenter()
     {
+        hitCounter = 0; // reset variable
+        
         // flip a coin and shoot the ball either in the left or right direction
          velX = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
          velZ = Random.Range(1,3) == 1 ? Random.Range(-4, -7) : Random.Range(4,7);
@@ -93,6 +102,8 @@ public class BallScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            hitCounter = 0; // reset variable
+            
             // PLAY PaddleHit audio file
             FindObjectOfType<AudioManager>().Play("PaddleHit");
             
@@ -124,6 +135,12 @@ public class BallScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Wall"))
         {
+            hitCounter++;
+            if (hitCounter >= maxHitCount)
+            {
+                ReturnToCenter();
+            }
+            
             // PLAY PaddleHit audio file with different pitch for the WallHit
             FindObjectOfType<AudioManager>().Play("WallHit");
         }
@@ -134,7 +151,11 @@ public class BallScript : MonoBehaviour
         // waiting for some seconds and reload the scene
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(sceneReloadDelay);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        // destroy and instantiate tsps script again
+        Destroy(tspsObject);
+        Instantiate(tspsObject);
     }
 }

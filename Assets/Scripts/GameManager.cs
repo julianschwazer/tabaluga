@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public GameObject delayedObject;
     public GameObject canvasGroup;
     public GameObject indicatorGroup;
+    public GameObject scoreFloorLeft;
+    public GameObject scoreFloorRight;
+    public GameObject scoreWallLeft;
+    public GameObject scoreWallRight;
 
     public float indicatorAnimationTime;
     public float goDisplayTime;
@@ -50,6 +54,12 @@ public class GameManager : MonoBehaviour
         countdownTextFloor.gameObject.SetActive(false);
         countdownTextWall.gameObject.SetActive(false);
         
+        // SHOW score texts
+        scoreFloorLeft.gameObject.SetActive(true);
+        scoreFloorRight.gameObject.SetActive(true);
+        scoreWallLeft.gameObject.SetActive(true);
+        scoreWallRight.gameObject.SetActive(true);
+
         // waiting for some seconds before the ball gets active and starts moving
         yield return new WaitForSecondsRealtime(ballWaitTime); // wait for another second
         delayedObject.gameObject.SetActive(true);
