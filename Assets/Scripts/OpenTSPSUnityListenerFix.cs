@@ -111,10 +111,32 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 	private Vector3 positionForPerson(OpenTSPSPerson person){
 		Bounds meshBounds = floor.GetComponent<Renderer>().bounds;
 
-		if (person.centroidX < 0.5 && person.centroidY < 0.5) {
+       /* if (person.centroidX < 0.5)
+        {
+            return new Vector3(playerOneX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
+            
+            }
+        else if (person.centroidX < 0.7)
+        {
+
+            return new Vector3(playerTwoX, 0.25f, (float)(person.centroidY - 0.5) * meshBounds.size.z);
+
+        }
+        else if (person.centroidX > 0.5)
+        {
+            return new Vector3(playerThreeX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
+        }
+        else { 
+
+            return new Vector3(playerFourX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
+            
+        }
+        */
+
+        if (person.centroidX < 0.5 && person.centroidY < 0.5) {
 			return new Vector3(playerOneX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-		else if (person.centroidX < 0.5 && person.centroidY > 0.5) {
+		else if (person.centroidX < 0.5 && person.centroidY > 0) {
 			return new Vector3(playerTwoX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
 		else if (person.centroidX > 0.5 && person.centroidY < 0.5) {
@@ -123,7 +145,7 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 		else {
 			return new Vector3(playerFourX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-	}
+    }
 
     public void TSPSConnect()
     {
