@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 261168780}
   - component: {fileID: 261168779}
   m_Layer: 0
-  m_Name: Cylinder (3)
+  m_Name: rechts oben
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 480388496}
   - component: {fileID: 480388495}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: rechts unten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3175,7 +3175,7 @@ GameObject:
   - component: {fileID: 1262503476}
   - component: {fileID: 1262503475}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: links unten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4013,6 +4013,10 @@ PrefabInstance:
       propertyPath: floor
       value: 
       objectReference: {fileID: 390580284}
+    - target: {fileID: 11400000, guid: e297540dcf5f341ed95ccd16bdf4df10, type: 3}
+      propertyPath: indicator
+      value: 
+      objectReference: {fileID: 1241875567}
     m_RemovedComponents:
     - {fileID: 6400000, guid: e297540dcf5f341ed95ccd16bdf4df10, type: 3}
     - {fileID: 6400002, guid: e297540dcf5f341ed95ccd16bdf4df10, type: 3}
@@ -4292,7 +4296,7 @@ GameObject:
   - component: {fileID: 1855184040}
   - component: {fileID: 1855184039}
   m_Layer: 0
-  m_Name: Cylinder (2)
+  m_Name: links oben
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
