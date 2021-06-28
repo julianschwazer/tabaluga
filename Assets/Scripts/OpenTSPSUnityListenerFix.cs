@@ -77,7 +77,18 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
             GameObject personObject = (GameObject)Instantiate(indicator, positionForPerson(person), Quaternion.identity);
             peopleCubes[person.id] = personObject;
             i++;
-
+        }
+        if (person.centroidX < 0.5 && person.centroidY < 0.5) {
+	        person.age = 1;
+        }
+        else if (person.centroidX < 0.5 && person.centroidY > 0.5) {
+	        person.age = 2;
+        }
+        else if (person.centroidX > 0.5 && person.centroidY < 0.5) {
+	        person.age = 3;
+        }
+        else {
+	        person.age = 4;
         }
     }
 
@@ -111,13 +122,13 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 	private Vector3 positionForPerson(OpenTSPSPerson person){
 		Bounds meshBounds = floor.GetComponent<Renderer>().bounds;
 
-		if (person.centroidX < 0.5 && person.centroidY < 0.5) {
+		if (person.age == 1) {
 			return new Vector3(playerOneX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-		else if (person.centroidX < 0.5 && person.centroidY > 0.5) {
+		else if (person.age == 2) {
 			return new Vector3(playerTwoX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-		else if (person.centroidX > 0.5 && person.centroidY < 0.5) {
+		else if (person.age == 3) {
 			return new Vector3(playerThreeX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
 		else {
