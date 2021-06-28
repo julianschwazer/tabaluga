@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListenerFix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListenerFix.cs" afterDir="false" />
-    </list>
+    <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

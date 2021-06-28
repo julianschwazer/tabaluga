@@ -44,12 +44,18 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 	public GameObject floor; //put the people on this plane
 	public GameObject indicator; //used to represent people moving about in our example
 
-	//Variablen f�r Fixierung der X-Position
+	//Variablen für Fixierung der X-Position
 	public float playerOneX = 5.0f;
 	public float playerTwoX = 3.0f;
 	public float playerThreeX = -3.0f;
 	public float playerFourX = -5.0f;
-
+	
+	// hacky
+	private int playerOne;
+	private int playerTwo;
+	private int playerThree;
+	private int playerFour;
+	
     //Einschränkung für 4 Spieler
     public int Max_People = 4;
     int i;
@@ -78,17 +84,18 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
             peopleCubes[person.id] = personObject;
             i++;
         }
-        if (person.centroidX < 0.5 && person.centroidY < 0.5) {
-	        person.age = 1;
+        if (person.centroidX < 0.5 && person.centroidY < 0.5)
+        {
+	        playerOne = person.id;
         }
         else if (person.centroidX < 0.5 && person.centroidY > 0.5) {
-	        person.age = 2;
+	        playerTwo = person.id;
         }
         else if (person.centroidX > 0.5 && person.centroidY < 0.5) {
-	        person.age = 3;
+	        playerThree = person.id;
         }
         else {
-	        person.age = 4;
+	        playerFour = person.id;
         }
     }
 
@@ -122,13 +129,13 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 	private Vector3 positionForPerson(OpenTSPSPerson person){
 		Bounds meshBounds = floor.GetComponent<Renderer>().bounds;
 
-		if (person.age == 1) {
+		if (person.id == playerOne) {
 			return new Vector3(playerOneX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-		else if (person.age == 2) {
+		else if (person.id == playerTwo) {
 			return new Vector3(playerTwoX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-		else if (person.age == 3) {
+		else if (person.id == playerThree) {
 			return new Vector3(playerThreeX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
 		else {
