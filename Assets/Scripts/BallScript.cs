@@ -157,5 +157,6 @@ public class BallScript : MonoBehaviour
         // destroy and instantiate tsps script again
         Destroy(tspsObject);
         Instantiate(tspsObject);
+
     }
 }

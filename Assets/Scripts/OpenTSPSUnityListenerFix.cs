@@ -47,13 +47,13 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 	//Variablen f�r Fixierung der X-Position
 	public float linkerXWert = 5.0f;
 	public float rechterXWert = -5.0f;
-	
-	void Start() {
-		receiver = new OpenTSPSReceiver( port );
-		receiver.addPersonListener( this );
-		//Security.PrefetchSocketPolicy("localhost",8843);
-		receiver.connect();
-		Debug.Log("created receiver on port " + port);
+
+    //Einschränkung für 4 Spieler
+    public int Max_People = 4;
+    int i;
+
+    void Start() {
+        TSPSConnect();
 	}
 			
 	void Update () {
@@ -69,10 +69,15 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 	}
 	
 	public void personEntered(OpenTSPSPerson person){
-		Debug.Log(" person entered with ID " + person.id);
-		GameObject personObject = (GameObject)Instantiate(indicator, positionForPerson(person), Quaternion.identity);
-		peopleCubes[person.id] = personObject;
-	}
+        if (i <= Max_People)
+        {
+            Debug.Log(" person entered with ID " + person.id);
+            GameObject personObject = (GameObject)Instantiate(indicator, positionForPerson(person), Quaternion.identity);
+            peopleCubes[person.id] = personObject;
+            i++;
+
+        }
+    }
 
 	public void personUpdated(OpenTSPSPerson person) {
 		personMoved(person);
@@ -94,8 +99,10 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 			peopleCubes.Remove(person.id);
 			//delete it from the scene	
 			Destroy(cubeToRemove);
-		}
-	}
+
+            i--;
+        }
+    }
 	
 	//maps the OpenTSPS coordinate system into one that matches the size of the bodenfl�che
 	private Vector3 positionForPerson(OpenTSPSPerson person){
@@ -109,4 +116,21 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 			return new Vector3(rechterXWert, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
 	}
+
+    void TSPSConnect()
+    {
+        receiver = new OpenTSPSReceiver(port);
+        receiver.addPersonListener(this);
+        //Security.PrefetchSocketPolicy("localhost",8843);
+        receiver.connect();
+        Debug.Log("created receiver on port " + port);
+        i = 0;
+    }
+
+    void TSPSDisconnect()
+    {
+        receiver.disconnect();
+        // vlt noch destroy von dem Receiver????
+
+    }
 }
