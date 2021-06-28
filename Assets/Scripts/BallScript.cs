@@ -27,6 +27,8 @@ public class BallScript : MonoBehaviour
     public TextMeshProUGUI scoreRightTextFloor, scoreRightTextWall;
     public TextMeshProUGUI winnerTextFloor,winnerTextWall;
 
+    public OpenTSPSUnityListenerFix tspsRestart = new OpenTSPSUnityListenerFix();
+
     public float sceneReloadDelay;
     
     void Start()
@@ -152,11 +154,17 @@ public class BallScript : MonoBehaviour
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(sceneReloadDelay);
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         // destroy and instantiate tsps script again
-        Destroy(tspsObject);
-        Instantiate(tspsObject);
+        //Destroy(tspsObject);
+        //Instantiate(tspsObject);
+        tspsRestart.TSPSDisconnect();
+        Debug.Log("TSPS DISCONNECT -------------------------------------------");
+        
+        tspsRestart.TSPSConnect();
+        Debug.Log(" TSPS NEW CONNECT------------------------------------------");
 
     }
 }

@@ -125,7 +125,7 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 		}
 	}
 
-    void TSPSConnect()
+    public void TSPSConnect()
     {
         receiver = new OpenTSPSReceiver(port);
         receiver.addPersonListener(this);
@@ -135,7 +135,7 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
         i = 0;
     }
 
-    void TSPSDisconnect()
+    public void TSPSDisconnect()
     {
         receiver.disconnect();
         // vlt noch destroy von dem Receiver????
