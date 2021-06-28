@@ -44,8 +44,8 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
     //private List<GameObject> m_list = new List<GameObject>();
 
     //game engine stuff for the example
-    public GameObject bodenfläche; //put the people on this plane
-    public GameObject personenindikator; //used to represent people moving about in our example
+    public GameObject floor; //put the people on this plane
+    public GameObject indicator; //used to represent people moving about in our example
 
     public int Max_People = 4;
     int i;
@@ -82,7 +82,7 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
         if( i <= Max_People)
         {
             Debug.Log(" person entered with ID " + person.id);
-            GameObject personObject = (GameObject)Instantiate(personenindikator, positionForPerson(person), Quaternion.identity);
+            GameObject personObject = (GameObject)Instantiate(indicator, positionForPerson(person), Quaternion.identity);
             peopleCubes[person.id] = personObject;
             i++;
             
@@ -123,7 +123,7 @@ public class OpenTSPSUnityListener : MonoBehaviour, OpenTSPSListener
     //maps the OpenTSPS coordinate system into one that matches the size of the bodenfläche
     private Vector3 positionForPerson(OpenTSPSPerson person)
     {
-        Bounds meshBounds = bodenfläche.GetComponent<Renderer>().bounds;
+        Bounds meshBounds = floor.GetComponent<Renderer>().bounds;
         return new Vector3((float)(.5 - person.centroidX) * meshBounds.size.x, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
     }
 }

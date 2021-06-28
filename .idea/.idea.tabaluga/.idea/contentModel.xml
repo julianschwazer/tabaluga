@@ -34,6 +34,7 @@
           <e p="BallScript.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="OpenTSPSUnityListener.cs" t="Include" />
+          <e p="OpenTSPSUnityListenerFix.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
           <e p="Sound.cs" t="Include" />
         </e>

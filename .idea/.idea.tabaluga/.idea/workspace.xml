@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tabaluga/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PongGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PongGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/Player1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/BallController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DistanceTester.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/GoalScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" />
@@ -55,6 +52,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListenerFix.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +104,7 @@
       <workItem from="1624702347956" duration="2472000" />
       <workItem from="1624711212006" duration="425000" />
       <workItem from="1624818489362" duration="1122000" />
+      <workItem from="1624886090629" duration="163000" />
     </task>
     <servers />
   </component>
