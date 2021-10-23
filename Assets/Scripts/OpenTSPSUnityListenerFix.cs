@@ -46,12 +46,12 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
 
 	//Variablen f�r Fixierung der X-Position
 	public float playerOneX = 5.0f;
-	public float playerTwoX = 3.0f;
-	public float playerThreeX = -3.0f;
-	public float playerFourX = -5.0f;
+	public float playerTwoX = -5.0f;
+	//public float playerThreeX = -3.0f;
+	//public float playerFourX = -5.0f;
 
     //Einschränkung für 4 Spieler
-    public int Max_People = 4;
+    public int Max_People = 2;
     int i;
 
     void Start() {
@@ -136,15 +136,15 @@ public class OpenTSPSUnityListenerFix : MonoBehaviour, OpenTSPSListener  {
         if (person.centroidX < 0.5 && person.centroidY < 0.5) {
 			return new Vector3(playerOneX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-		else if (person.centroidX < 0.5 && person.centroidY > 0) {
+		else{ //(person.centroidX < 0.5 && person.centroidY > 0) {
 			return new Vector3(playerTwoX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
 		}
-		else if (person.centroidX > 0.5 && person.centroidY < 0.5) {
-			return new Vector3(playerThreeX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
-		}
-		else {
-			return new Vector3(playerFourX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
-		}
+		//else if (person.centroidX > 0.5 && person.centroidY < 0.5) {
+		//	return new Vector3(playerThreeX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
+		//}
+		//else {
+		//	return new Vector3(playerFourX, 0.25f, (float)(person.centroidY - .5) * meshBounds.size.z);
+		//}
     }
 
     public void TSPSConnect()
