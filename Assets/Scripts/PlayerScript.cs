@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
 {
     private Rigidbody _rb;
     
-    // public string left, right;
+    public string left, right;
     public float speed;
     public float paddleX;
     
@@ -20,9 +20,9 @@ public class PlayerScript : MonoBehaviour
     private void FixedUpdate()
     {
         // change position of al paddles with the mouse
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
-        mousePos = new Vector3(paddleX, 0, mousePos.z); // ignore unneeded coordinates
-        _rb.velocity = (mousePos - transform.position) * speed; // change paddle position with mouse
+        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
+        //mousePos = new Vector3(paddleX, 0, mousePos.z); // ignore unneeded coordinates
+        //_rb.velocity = (mousePos - transform.position) * speed; // change paddle position with mouse
         
         // player login interface overlay
         // countdown 
@@ -54,17 +54,15 @@ public class PlayerScript : MonoBehaviour
         //Debug.Log(mousePosition.x + " , " + mousePosition.z);
         
         // Player Movement Centralised
-        //if (Input.GetKey(left))
-        //{
-        //    transform.Translate(Vector3.left * Time.deltaTime * speed, Space.Self);
-        //}
-        //else if (Input.GetKey(right))
-        //{
-        //    //transform.Translate(new Vector3(speed * Time.deltaTime, 0 , 0));
-        //    transform.Translate(Vector3.right * Time.deltaTime * speed, Space.Self);
-        //}
-        
-    }
-
-    
+        if (Input.GetKey(left) && transform.position.z > -3.4)
+        {
+            transform.Translate(Vector3.back * Time.deltaTime * speed, Space.Self);
+        }
+        else if (Input.GetKey(right) && transform.position.z < 3.4)
+        {
+            //transform.Translate(new Vector3(speed * Time.deltaTime, 0 , 0));
+            transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
+        }   
+    } 
 }
+
