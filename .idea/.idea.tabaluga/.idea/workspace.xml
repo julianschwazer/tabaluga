@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="" />
+    <list default="true" id="3fa14e63-3d77-44f5-96d8-c76b59580813" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PongGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PongGame.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,26 +34,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/Player1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/BallController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DistanceTester.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/GoalScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/PlayerScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pong/BallScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Sound.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Archive/BallController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Indicators.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OpenTSPSUnityListenerFix.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1skYVKwlSIrwQ0frXoFisJjAmDg" />
   <component name="ProjectViewState">
@@ -103,6 +88,7 @@
       <workItem from="1624711212006" duration="425000" />
       <workItem from="1624818489362" duration="1122000" />
       <workItem from="1624886090629" duration="163000" />
+      <workItem from="1635256155421" duration="402000" />
     </task>
     <servers />
   </component>
