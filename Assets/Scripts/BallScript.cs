@@ -16,7 +16,7 @@ public class BallScript : MonoBehaviour
     // bulletproofing
     private int hitCounter;
     public int maxHitCount;
-    public GameObject tspsObject;
+    //public GameObject tspsObject;
     
     // score variables
     private int _scoreLeft, _scoreRight;
@@ -27,7 +27,7 @@ public class BallScript : MonoBehaviour
     public TextMeshProUGUI scoreRightTextFloor, scoreRightTextWall;
     public TextMeshProUGUI winnerTextFloor,winnerTextWall;
 
-    public OpenTSPSUnityListenerFix tspsRestart = new OpenTSPSUnityListenerFix();
+    //public OpenTSPSUnityListenerFix tspsRestart = new OpenTSPSUnityListenerFix();
 
     public float sceneReloadDelay;
     
@@ -54,7 +54,7 @@ public class BallScript : MonoBehaviour
             winnerTextWall.gameObject.SetActive(true);
             
             // WINNER text and load indicator scene
-            winnerTextFloor.text = winnerTextWall.text = "LEFT TEAM WINS";
+            winnerTextFloor.text = winnerTextWall.text = "Player 1 Wins";
             StartCoroutine(ReloadGame());
 
         }
@@ -65,7 +65,7 @@ public class BallScript : MonoBehaviour
             winnerTextWall.gameObject.SetActive(true);
             
             // WINNER text and load indicator scene
-            winnerTextFloor.text = winnerTextWall.text = "RIGHT TEAM WINS";
+            winnerTextFloor.text = winnerTextWall.text = "Player 2 Wins";
             StartCoroutine(ReloadGame());
         }
        // MoveBall();
@@ -157,14 +157,13 @@ public class BallScript : MonoBehaviour
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        // destroy and instantiate tsps script again
+        //destroy and instantiate tsps script again
         //Destroy(tspsObject);
         //Instantiate(tspsObject);
-        tspsRestart.TSPSDisconnect();
-        Debug.Log("TSPS DISCONNECT -------------------------------------------");
+        //tspsRestart.TSPSDisconnect();
+        //Debug.Log("TSPS DISCONNECT -------------------------------------------");
         
-        tspsRestart.TSPSConnect();
-        Debug.Log(" TSPS NEW CONNECT------------------------------------------");
-
+        //tspsRestart.TSPSConnect();
+        //Debug.Log(" TSPS NEW CONNECT------------------------------------------");
     }
 }
