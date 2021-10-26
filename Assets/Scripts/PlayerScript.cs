@@ -20,9 +20,9 @@ public class PlayerScript : MonoBehaviour
     private void FixedUpdate()
     {
         // change position of al paddles with the mouse
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
-        mousePos = new Vector3(paddleX, 0, mousePos.z); // ignore unneeded coordinates
-        _rb.velocity = (mousePos - transform.position) * speed; // change paddle position with mouse
+       // Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
+       // mousePos = new Vector3(paddleX, 0, mousePos.z); // ignore unneeded coordinates
+       // _rb.velocity = (mousePos - transform.position) * speed; // change paddle position with mouse
         
         // player login interface overlay
         // countdown 
@@ -31,14 +31,14 @@ public class PlayerScript : MonoBehaviour
         // if playerOne --> centroidX = _playerOneX; centroidZ = _playerOneZ;
         // ...
         
-        // Player 1
-        // if X > 6 and Z < 0
+        //Player 1
+        //if X > 6 and Z < 0
         
         // Player 2
         // if X < 6 and Z > 0
         
         // Player 3
-        // if X > -6 and Z < 0
+        //if X > -6 and Z < 0
         
         // Player 4
         // if X < -6 and Z > 0
