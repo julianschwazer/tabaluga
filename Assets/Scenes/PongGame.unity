@@ -1238,8 +1238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55548068c5d24464a74ab639fa8e248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: j
-  right: l
+  left: w
+  right: a
   speed: 10
   paddleX: -6.75
 --- !u!65 &481063410
@@ -1273,7 +1273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 692e59f225ad941efa8feb3fa92711c8, type: 2}
+  - {fileID: 2100000, guid: fdb729e4e2d49bb4caec92e72053bd37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1802,6 +1802,8 @@ GameObject:
   - component: {fileID: 760603728}
   - component: {fileID: 760603727}
   - component: {fileID: 760603731}
+  - component: {fileID: 760603732}
+  - component: {fileID: 760603733}
   m_Layer: 0
   m_Name: Camera 1 - Floor
   m_TagString: MainCamera
@@ -1889,9 +1891,41 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760603726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sourceTexture: {fileID: 0}
+  _alphaSupport: 0
+--- !u!114 &760603732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760603726}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d98e5bfcdff4847ad69efa861a8e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ndiName: NDI Sender Floor
+  _enableAlpha: 0
+  _captureMethod: 1
+  _sourceCamera: {fileID: 760603729}
+  _sourceTexture: {fileID: 0}
+  _resources: {fileID: 11400000, guid: 69304b86950074db7ba8caba75214004, type: 2}
+--- !u!114 &760603733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760603726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59ae4f317f9b4f8b8d64f71768aaea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sourceTexture: {fileID: 0}
@@ -2877,6 +2911,8 @@ GameObject:
   - component: {fileID: 1191437056}
   - component: {fileID: 1191437055}
   - component: {fileID: 1191437054}
+  - component: {fileID: 1191437058}
+  - component: {fileID: 1191437059}
   m_Layer: 0
   m_Name: Camera 2 - Wall
   m_TagString: Untagged
@@ -2891,7 +2927,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191437053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
   m_Name: 
@@ -2963,6 +2999,38 @@ Transform:
   m_Father: {fileID: 1861621578}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1191437058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191437053}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d98e5bfcdff4847ad69efa861a8e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ndiName: NDI Sender Wall
+  _enableAlpha: 0
+  _captureMethod: 1
+  _sourceCamera: {fileID: 1191437056}
+  _sourceTexture: {fileID: 0}
+  _resources: {fileID: 11400000, guid: 69304b86950074db7ba8caba75214004, type: 2}
+--- !u!114 &1191437059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191437053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59ae4f317f9b4f8b8d64f71768aaea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sourceTexture: {fileID: 0}
+  _alphaSupport: 0
 --- !u!1 &1222140835
 GameObject:
   m_ObjectHideFlags: 0
@@ -4762,8 +4830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55548068c5d24464a74ab639fa8e248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: a
-  right: d
+  left: s
+  right: g
   speed: 10
   paddleX: 6.75
 --- !u!65 &3385597918137642985
@@ -4827,7 +4895,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 692e59f225ad941efa8feb3fa92711c8, type: 2}
+  - {fileID: 2100000, guid: d2042f244db7041219280b62269c55ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
